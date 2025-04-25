@@ -14,6 +14,6 @@ This website features:
 
 ## 🖥 Live Preview
 You can view the live version of the site here:  
-👉 [https://yourusername.github.io/bloom-delight](https://yourusername.github.io/bloom-delight) ← *(update with your real link!)*
+👉 [https://akkermansjulian.github.io/bloom-delight](https://akkermansjulian.github.io/Bloom-Delight/) ← *(update with your real link!)*
 
 ## 📂 Project Structure
