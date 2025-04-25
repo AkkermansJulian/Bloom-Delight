@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom & Delight</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+    .flip-card {
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 0.5rem;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+      background-color: #fff;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .flip-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(252, 148, 175, 0.6);
+    }
+  </style>
+</head>
+<body id="top" class="font-sans pt-20" style="background-color: #FFF0F4;">
+  <header class="bg-white shadow-md p-4 flex justify-between items-center fixed top-0 w-full z-50">
+    <h1 class="text-2xl font-bold" style="color: #FC94AF;">Bloom & Delight</h1>
+    <nav>
+      <ul class="flex space-x-4 font-medium" style="color: #FC94AF;">
+        <li><a href="#" class="hover:text-pink-600 hover:scale-200 hover:font-bold hover:shadow-xl transform transition duration-300" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Home</a></li>
+        <li><a href="#gallery" class="hover:text-pink-600 hover:scale-200 hover:font-bold hover:shadow-xl transform transition duration-300" onclick="const gallery = document.getElementById('gallery'); const yOffset = -100; const y = gallery.getBoundingClientRect().top + window.pageYOffset + yOffset; window.scrollTo({top: y, behavior: 'smooth'}); return false;">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-pink-600 hover:scale-200 hover:font-bold hover:shadow-xl transform transition duration-300" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="text-center p-10 border-4 rounded-lg relative overflow-hidden" style="background: linear-gradient(to bottom right, #FC94AF, #FDA4BA); border-color: #bc8f8f;">
+    <h2 class="text-4xl font-bold text-white mb-4">Gifts that Bloom & Delight</h2>
+    <p class="text-lg text-white mb-6">Beautiful bouquets & sweet treats <span class="underline">handcrafted</span> with love</p>
+    <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:scale-200 hover:font-bold hover:shadow-xl transform transition duration-300 text-white px-6 py-2 rounded-full" style="background-color: #FC94AF;">Order Now</a>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop" class="p-10 border-2 rounded-lg" style="border-color: #bc8f8f; background-color: #FFF5F8;">
+    <h3 class="text-3xl font-bold text-center mb-2" style="color: #FC94AF;">Our Collection</h3>
+    <p class="text-center mb-4" style="color: #FC94AF;">Click on icons to learn more</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-110 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner" style="min-height: 300px;">
+          <div class="flip-card-front">
+            <img src="https://i.imgur.com/4H4BqvC.jpg" alt="Flower Arrangements" class="w-full h-64 object-cover object-center border border-black border-opacity-30 rounded-lg mb-2" />
+            <h4 class="text-xl font-semibold" style="color: #FC94AF;">Flower Arrangements</h4>
+            <p class="text-gray-600">Fresh, seasonal blooms wrapped or in vases</p>
+          </div>
+          <div class="flip-card-back">
+            <p>Nutritional info coming soon!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-110 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner" style="min-height: 300px;">
+          <div class="flip-card-front">
+            <img src="https://i.imgur.com/7trTqYC.jpg" alt="Chocolate Covered Strawberries" class="w-full h-64 object-cover object-center scale-150 rounded-lg mb-2" />
+            <h4 class="text-xl font-semibold" style="color: #FC94AF;">Chocolate-Covered Strawberries</h4>
+            <p class="text-gray-600">Sweet and juicy, dipped in premium chocolate</p>
+          </div>
+          <div class="flip-card-back">
+            <p>Nutritional info coming soon!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-110 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner" style="min-height: 300px;">
+          <div class="flip-card-front">
+            <img src="treats.jpg" alt="Pretzel and Oreo Treats" class="w-full max-h-64 object-contain border border-black border-opacity-30 rounded-lg mb-2" />
+            <h4 class="text-xl font-semibold" style="color: #FC94AF;">Pretzels & Oreos</h4>
+            <p class="text-gray-600">Delightfully decorated and perfect for sharing</p>
+          </div>
+          <div class="flip-card-back">
+            <p>Nutritional info coming soon!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="p-10 border-2 rounded" style="background-color: #FFF5F8; border-color: #bc8f8f;">
+  <h3 class="text-3xl font-bold text-center mb-6" style="color: #FC94AF;">Gallery</h3>
+  <p class="text-center mb-4" style="color: #FC94AF;">Take a look at some of our favorite creations</p>
+  <div class="flex flex-wrap gap-2 justify-center">
+    <img src="https://i.imgur.com/xhSoDWx.jpg" alt="Strawberries 1" class="max-h-64 object-contain border border-black border-opacity-30 rounded shadow cursor-pointer" onclick="showLightbox(this.src)" />
+    <img src="https://i.imgur.com/S9TCsW6.jpg" alt="Strawberries 2" class="max-h-64 object-contain border border-black border-opacity-30 rounded shadow cursor-pointer" onclick="showLightbox(this.src)" />
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="p-10 bg-white">
+  <h3 class="text-3xl font-bold text-center mb-4" style="color: #FC94AF;">Get in Touch by Ordering Now!</h3>
+  <form id="contactForm" action="https://formspree.io/f/meogqvyw" method="POST" class="max-w-xl mx-auto grid gap-4">
+    <input type="text" name="name" placeholder="Your Name" class="border p-2 rounded" required />
+    <input type="email" name="email" placeholder="Your Email" class="border p-2 rounded" required />
+    <textarea name="message" placeholder="Please include any design requests, quantity details, or allergy information." class="border p-2 rounded h-24" required></textarea>
+    <button type="submit" class="text-white py-2 rounded transition transform hover:scale-200 hover:font-bold hover:shadow-xl" style="background-color: #FC94AF;">Send Message</button>
+    <p id="thankYouMessage" class="text-green-600 font-semibold text-center mt-4 hidden"></p>
+  </form>
+</section>
+
+<!-- About Us Section -->
+<section id="about-us" class="p-10 bg-white text-center">
+  <h3 class="text-3xl font-bold text-center mb-4" style="color: #FC94AF;">About Us</h3>
+  <p class="text-lg font-bold text-pink-400">We are an up-and-coming small business, we want our customers to feel safe and confident when they think of us but most importantly, delivering delicious treats and beauty to your doorstep! ❤️</p>
+  <p class="text-lg font-bold text-pink-400 mt-6">Follow our Instagram!</p>
+</section>
+
+<!-- Footer -->
+<footer class="text-white text-center p-4" style="background-color: #FC94AF;">
+  &copy; 2025 Bloom & Delight. All rights reserved.
+</footer>
+
+<script>
+  function showLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = src;
+    lightbox.style.display = 'flex';
+  }
+</script>
+</body>
+</html>
