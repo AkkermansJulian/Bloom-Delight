@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bloom & Delight</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+    }
     .lightbox {
       position: fixed;
       top: 0;
@@ -64,8 +71,17 @@
       padding: 1rem;
     }
     .flip-card:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       box-shadow: 0 0 25px rgba(252, 148, 175, 0.6);
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -74,79 +90,84 @@
     <h1 class="text-2xl font-bold" style="color: #FC94AF;">Bloom & Delight</h1>
     <nav>
       <ul class="flex space-x-4 font-medium" style="color: #FC94AF;">
-        <li><a href="#" class="hover:text-pink-600 hover:scale-200 hover:font-bold transform transition duration-300" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Home</a></li>
-        <li><a href="#gallery" class="hover:text-pink-600 hover:scale-200 hover:font-bold transform transition duration-300" onclick="const gallery = document.getElementById('gallery'); const yOffset = -100; const y = gallery.getBoundingClientRect().top + window.pageYOffset + yOffset; window.scrollTo({top: y, behavior: 'smooth'}); return false;">Gallery</a></li>
-        <li><a href="#contact" class="hover:text-pink-600 hover:scale-200 hover:font-bold transform transition duration-300" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;">About Us</a></li>
+        <li><a href="#" class="hover:text-pink-600 hover:scale-110 hover:font-bold transform transition duration-300" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Home</a></li>
+        <li><a href="#pricing" class="hover:text-pink-600 hover:scale-110 hover:font-bold transform transition duration-300" onclick="const pricing = document.getElementById('pricing'); const yOffset = -100; const y = pricing.getBoundingClientRect().top + window.pageYOffset + yOffset; window.scrollTo({top: y, behavior: 'smooth'}); return false;">Packages</a></li>
+        <li><a href="#contact" class="hover:text-pink-600 hover:scale-110 hover:font-bold transform transition duration-300" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;">About Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Remaining content unchanged -->
-
  <!-- Hero Section -->
-  <section id="home" class="text-center p-10 border-4 rounded-lg relative overflow-hidden" style="background: linear-gradient(to bottom right, #FC94AF, #FDA4BA); border-color: #bc8f8f;">
+  <section id="home" class="text-center p-10 border-4 rounded-lg relative overflow-hidden fade-up" style="background: url('https://www.transparenttextures.com/patterns/diagmonds-light.png'); background-color: #FC94AF; background-repeat: repeat; border-color: #bc8f8f;">
     <h2 class="text-4xl font-bold text-white mb-4">Gifts that Bloom & Delight</h2>
     <p class="text-lg text-white mb-6">Beautiful bouquets & sweet treats <span class="underline">handcrafted</span> with love</p>
-    <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:scale-200 hover:font-bold hover:shadow-xl transform transition duration-300 text-white px-6 py-2 rounded-full" style="background-color: #FC94AF;">Order Now</a>
+    <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:scale-110 hover:font-bold hover:shadow-xl transform transition duration-300 text-white px-6 py-2 rounded-full" style="background-color: #FC94AF;">Create Your Delight</a>
   </section>
 
   <!-- Shop Section -->
-  <section id="shop" class="p-10 border-2 rounded-lg" style="border-color: #bc8f8f; background-color: #FFF5F8;">
+  <section id="shop" class="p-10 border-2 rounded-lg fade-up" style="border-color: #bc8f8f; background-color: #FFF5F8;">
     <h3 class="text-3xl font-bold text-center mb-2" style="color: #FC94AF;">Our Collection</h3>
     <p class="text-center mb-4 underline text-gray-700">Click on icons to learn more</p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-110 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
         <div class="flip-card-inner" style="min-height: 300px;">
           <div class="flip-card-front">
             <img src="https://i.imgur.com/4H4BqvC.jpg" alt="Flower Arrangements" class="w-full h-64 object-cover object-center border border-black border-opacity-30 rounded-lg mb-2" />
             <h4 class="text-xl font-semibold" style="color: #FC94AF;">Flower Arrangements</h4>
-            
           </div>
           <div class="flip-card-back">
-            <p>Nutritional info coming soon!</p>
+            <p>Freshly crafted to brighten any moment!</p>
           </div>
         </div>
       </div>
 
-      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-110 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
         <div class="flip-card-inner" style="min-height: 300px;">
           <div class="flip-card-front">
             <img src="https://i.imgur.com/7trTqYC.jpg" alt="Chocolate Covered Strawberries" class="w-full h-64 object-cover object-center scale-150 rounded-lg mb-2" />
             <h4 class="text-xl font-semibold" style="color: #FC94AF;">Chocolate-Covered Strawberries</h4>
-            
           </div>
           <div class="flip-card-back">
-            <p>Nutritional info coming soon!</p>
+            <p>Sweet, juicy, and dipped in love!</p>
           </div>
         </div>
       </div>
 
-      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-110 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
         <div class="flip-card-inner" style="min-height: 300px;">
           <div class="flip-card-front">
             <img src="treats.jpg" alt="Pretzel and Oreo Treats" class="w-full max-h-64 object-contain border border-black border-opacity-30 rounded-lg mb-2" />
             <h4 class="text-xl font-semibold" style="color: #FC94AF;">Pretzels & Oreos</h4>
-            
           </div>
           <div class="flip-card-back">
-            <p>Nutritional info coming soon!</p>
+            <p>Crunchy, creamy, irresistible bliss!</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-<!-- Gallery Section -->
-<section id="gallery" class="p-10 border-2 rounded" style="background-color: #FFF5F8; border-color: #bc8f8f;">
-  <h3 class="text-3xl font-bold text-center mb-6" style="color: #FC94AF;">Gallery</h3>
-  <p class="text-center mb-4 text-gray-700">Take a look at some of our favorite creations!</p>
-  <div class="flex flex-wrap gap-2 justify-center items-center min-h-[256px]">
-  <div class="bg-white p-8 rounded-lg shadow-md">
-    <p class="text-2xl font-semibold text-gray-700">Coming Soon</p>
-  </div>
-  </div>
-</section>
-
+  <!-- Pricing Section -->
+  <section id="pricing" class="p-10 bg-white fade-up">
+    <h3 class="text-3xl font-bold text-center mb-8" style="color: #FC94AF;">Our Packages</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <div class="border p-6 rounded-lg shadow-md">
+        <h4 class="text-2xl font-semibold mb-4" style="color: #FC94AF;">Sweet Bloom</h4>
+        <p class="text-gray-700 mb-4">6 Chocolate-Covered Strawberries<br>Mini Bouquet<br>Handwritten Note</p>
+        <p class="text-xl font-bold" style="color: #FC94AF;">$35</p>
+      </div>
+      <div class="border p-6 rounded-lg shadow-md">
+        <h4 class="text-2xl font-semibold mb-4" style="color: #FC94AF;">Full Delight</h4>
+        <p class="text-gray-700 mb-4">12 Chocolate-Covered Strawberries<br>Full Bouquet<br>Custom Greeting Card</p>
+        <p class="text-xl font-bold" style="color: #FC94AF;">$60</p>
+      </div>
+      <div class="border p-6 rounded-lg shadow-md">
+        <h4 class="text-2xl font-semibold mb-4" style="color: #FC94AF;">Bloom Party Pack</h4>
+        <p class="text-gray-700 mb-4">24 Assorted Treats<br>Large Custom Arrangement<br>Event Personalization</p>
+        <p class="text-xl font-bold" style="color: #FC94AF;">$120</p>
+      </div>
+    </div>
+  </section>
 <!-- Contact Section -->
 <section id="contact" class="p-10 bg-white">
   <h3 class="text-3xl font-bold text-center mb-4" style="color: #FC94AF;">Get in Touch by Ordering Now!</h3>
@@ -173,13 +194,23 @@ We are an up-and-coming small business, and we want our customers to feel safe a
 </a>
 
 </section>
-
+  
 <!-- Footer -->
 <footer class="text-white text-center p-4" style="background-color: #FC94AF;">
   &copy; 2025 Bloom & Delight. All rights reserved.
 </footer>
-
+  
 <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
   function showLightbox(src) {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
