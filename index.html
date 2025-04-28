@@ -67,7 +67,6 @@
       transform: scale(1.1);
       box-shadow: 0 0 25px rgba(252, 148, 175, 0.6);
     }
-
   </style>
 </head>
 <body id="top" class="font-sans pt-20" style="background-color: #FFF0F4;">
@@ -75,14 +74,16 @@
     <h1 class="text-2xl font-bold" style="color: #FC94AF;">Bloom & Delight</h1>
     <nav>
       <ul class="flex space-x-4 font-medium" style="color: #FC94AF;">
-        <li><a href="#" class="hover:text-pink-600 hover:scale-200 hover:font-bold hover:shadow-xl transform transition duration-300" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Home</a></li>
-        <li><a href="#gallery" class="hover:text-pink-600 hover:scale-200 hover:font-bold hover:shadow-xl transform transition duration-300" onclick="const gallery = document.getElementById('gallery'); const yOffset = -100; const y = gallery.getBoundingClientRect().top + window.pageYOffset + yOffset; window.scrollTo({top: y, behavior: 'smooth'}); return false;">Gallery</a></li>
-        <li><a href="#contact" class="hover:text-pink-600 hover:scale-200 hover:font-bold hover:shadow-xl transform transition duration-300" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;">About Us</a></li>
+        <li><a href="#" class="hover:text-pink-600 hover:scale-200 hover:font-bold transform transition duration-300" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Home</a></li>
+        <li><a href="#gallery" class="hover:text-pink-600 hover:scale-200 hover:font-bold transform transition duration-300" onclick="const gallery = document.getElementById('gallery'); const yOffset = -100; const y = gallery.getBoundingClientRect().top + window.pageYOffset + yOffset; window.scrollTo({top: y, behavior: 'smooth'}); return false;">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-pink-600 hover:scale-200 hover:font-bold transform transition duration-300" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;">About Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Remaining content unchanged -->
+
+ <!-- Hero Section -->
   <section id="home" class="text-center p-10 border-4 rounded-lg relative overflow-hidden" style="background: linear-gradient(to bottom right, #FC94AF, #FDA4BA); border-color: #bc8f8f;">
     <h2 class="text-4xl font-bold text-white mb-4">Gifts that Bloom & Delight</h2>
     <p class="text-lg text-white mb-6">Beautiful bouquets & sweet treats <span class="underline">handcrafted</span> with love</p>
@@ -162,9 +163,15 @@
 <section id="about-us" class="p-10 bg-white text-center">
   <h3 class="text-3xl font-bold text-center mb-4" style="color: #FC94AF;">About Us</h3>
   <p class="text-lg font-semibold text-gray-700 leading-relaxed">
-We are an up-and-coming small business, we want our customers to feel safe and confident when they think of us but most importantly, delivering delicious treats and beauty to your doorstep! ❤️
+We are an up-and-coming small business, and we want our customers to feel safe and confident when they think of us — but most importantly, we aim to deliver delicious treats and beauty right to your doorstep! ❤️
 </p>
-<a href="https://www.instagram.com/bloom._delight?igsh=MTE5eHc3ZW5zZTFqNg%3D%3D&utm_source=qr" target="_blank" class="inline-block mt-2 text-white font-semibold py-2 px-4 rounded-full shadow-lg transition duration-300" style="background-color: #FC94AF; hover:background-color: #5b5054;">Visit us on Instagram</a>
+<a href="https://www.instagram.com/bloom._delight?igsh=MTE5eHc3ZW5zZTFqNg%3D%3D&utm_source=qr" 
+  target="_blank" 
+  class="inline-block mt-2 text-white font-semibold py-2 px-4 rounded-full transition transform hover:scale-200 hover:font-bold hover:shadow-xl duration-300" 
+  style="background-color: #FC94AF;">
+  Visit us on Instagram
+</a>
+
 </section>
 
 <!-- Footer -->
