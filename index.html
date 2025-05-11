@@ -100,7 +100,7 @@
  <!-- Hero Section -->
   <section id="home" class="text-center p-10 border-4 rounded-lg relative overflow-hidden fade-up" style="background: url('https://www.transparenttextures.com/patterns/diagmonds-light.png'); background-color: #FC94AF; background-repeat: repeat; border-color: #bc8f8f;">
     <h2 class="text-4xl font-bold text-white mb-4">Gifts that Bloom & Delight</h2>
-    <p class="text-lg text-white mb-6">Beautiful bouquets & sweet treats <span class="underline">handcrafted</span> with love</p>
+    <p class="text-lg text-white mb-6">Beautiful bouquets & sweet treats handcrafted with love</p>
     <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:scale-110 hover:font-bold hover:shadow-xl transform transition duration-300 text-white px-6 py-2 rounded-full" style="background-color: #FC94AF;">Create Your Delight</a>
   </section>
 
@@ -108,42 +108,39 @@
   <section id="shop" class="p-10 border-2 rounded-lg fade-up" style="border-color: #bc8f8f; background-color: #FFF5F8;">
     <h3 class="text-3xl font-bold text-center mb-2" style="color: #FC94AF;">Our Collection</h3>
     <p class="text-center mb-4 underline text-gray-700">Click on icons to learn more</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
-        <div class="flip-card-inner" style="min-height: 300px;">
-          <div class="flip-card-front">
-            <img src="https://i.imgur.com/4H4BqvC.jpg" alt="Flower Arrangements" class="w-full h-64 object-cover object-center border border-black border-opacity-30 rounded-lg mb-2" />
-            <h4 class="text-xl font-semibold" style="color: #FC94AF;">Flower Arrangements</h4>
-          </div>
-          <div class="flip-card-back">
-            <p>Freshly crafted to brighten any moment!</p>
-          </div>
-        </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center max-w-4xl mx-auto">
+  <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl w-full max-w-md mx-auto" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card-inner" style="min-height: 300px;">
+      <div class="flip-card-front">
+        <img src="https://i.imgur.com/4H4BqvC.jpg" alt="Flower Arrangements" class="w-full h-64 object-cover object-center rounded-lg mb-2" />
+        <div class="flex items-center justify-center gap-2 mt-2 mb-2">
+  <span class="w-6 h-px bg-pink-300"></span>
+  <h4 class="text-xl font-semibold text-center" style="color: #FC94AF;">Flower Arrangements</h4>
+  <span class="w-6 h-px bg-pink-300"></span>
+</div>
       </div>
+      <div class="flip-card-back">
+        <p>Freshly crafted to brighten any moment!</p>
+      </div>
+    </div>
+  </div>
 
-      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
-        <div class="flip-card-inner" style="min-height: 300px;">
-          <div class="flip-card-front">
-            <img src="https://i.imgur.com/7trTqYC.jpg" alt="Chocolate Covered Strawberries" class="w-full h-64 object-cover object-center scale-150 rounded-lg mb-2" />
-            <h4 class="text-xl font-semibold" style="color: #FC94AF;">Chocolate-Covered Strawberries</h4>
-          </div>
-          <div class="flip-card-back">
-            <p>Sweet, juicy, and dipped in love!</p>
-          </div>
-        </div>
+  <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl w-full max-w-md mx-auto" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card-inner" style="min-height: 300px;">
+      <div class="flip-card-front">
+        <img src="https://i.imgur.com/7trTqYC.jpg" alt="Chocolate Covered Strawberries" class="w-full h-64 object-cover object-center rounded-lg mb-2" />
+        <div class="flex items-center justify-center gap-2 mt-2 mb-2">
+  <span class="w-6 h-px bg-pink-300"></span>
+  <h4 class="text-xl font-semibold text-center" style="color: #FC94AF;">Chocolate-Covered Strawberries</h4>
+  <span class="w-6 h-px bg-pink-300"></span>
+</div>
       </div>
-
-      <div class="flip-card bg-white p-4 rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="this.classList.toggle('flipped')">
-        <div class="flip-card-inner" style="min-height: 300px;">
-          <div class="flip-card-front">
-            <img src="treats.jpg" alt="Pretzel and Oreo Treats" class="w-full max-h-64 object-contain border border-black border-opacity-30 rounded-lg mb-2" />
-            <h4 class="text-xl font-semibold" style="color: #FC94AF;">Pretzels & Oreos</h4>
-          </div>
-          <div class="flip-card-back">
-            <p>Crunchy, creamy, irresistible bliss!</p>
-          </div>
-        </div>
+      <div class="flip-card-back">
+        <p>Sweet, juicy, and dipped in love!</p>
       </div>
+    </div>
+  </div>
+</div>
     </div>
   </section>
 
@@ -151,17 +148,17 @@
   <section id="pricing" class="p-10 bg-white fade-up">
     <h3 class="text-3xl font-bold text-center mb-8" style="color: #FC94AF;">Our Packages</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-      <div class="border p-6 rounded-lg shadow-md">
+      <div class="border p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" onclick="document.querySelector('textarea[name=message]').value='Sweet Bloom'; showSelectionMessage('Sweet Bloom')">
         <h4 class="text-2xl font-semibold mb-4" style="color: #FC94AF;">Sweet Bloom</h4>
         <p class="text-gray-700 mb-4">6 Chocolate-Covered Strawberries<br>Mini Bouquet<br>Handwritten Note</p>
         <p class="text-xl font-bold" style="color: #FC94AF;">$35</p>
       </div>
-      <div class="border p-6 rounded-lg shadow-md">
+      <div class="border p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" onclick="document.querySelector('textarea[name=message]').value='Full Delight'; showSelectionMessage('Full Delight')">
         <h4 class="text-2xl font-semibold mb-4" style="color: #FC94AF;">Full Delight</h4>
         <p class="text-gray-700 mb-4">12 Chocolate-Covered Strawberries<br>Full Bouquet<br>Custom Greeting Card</p>
         <p class="text-xl font-bold" style="color: #FC94AF;">$60</p>
       </div>
-      <div class="border p-6 rounded-lg shadow-md">
+      <div class="border p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" onclick="document.querySelector('textarea[name=message]').value='Bloom Party Pack'; showSelectionMessage('Bloom Party Pack')">
         <h4 class="text-2xl font-semibold mb-4" style="color: #FC94AF;">Bloom Party Pack</h4>
         <p class="text-gray-700 mb-4">24 Assorted Treats<br>Large Custom Arrangement<br>Event Personalization</p>
         <p class="text-xl font-bold" style="color: #FC94AF;">$120</p>
@@ -217,6 +214,12 @@ We are an up-and-coming small business, and we want our customers to feel safe a
     lightboxImg.src = src;
     lightbox.style.display = 'flex';
   }
+function showSelectionMessage(packageName) {
+  const thankYou = document.getElementById('thankYouMessage');
+  thankYou.textContent = `"${packageName}" added to message box!`;
+  thankYou.classList.remove('hidden');
+  setTimeout(() => thankYou.classList.add('hidden'), 2000);
+}
 </script>
 </body>
 </html>
